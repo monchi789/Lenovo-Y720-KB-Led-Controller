@@ -1,7 +1,10 @@
 node_modules/
 package-lock.json
-.vscode/
 dist/
 build/
 *.node
 *.md5
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

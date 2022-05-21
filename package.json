@@ -1,84 +1,84 @@
 {
-	"productName": "Lenovo Y720 Keyboard LED Controller",
-	"name": "y720-kb-led-controller",
-	"engines": {
-		"node": "=16.9.1"
-	},
-	"engineStrict": true,
-	"version": "2.0.1",
-	"description": "Software to control the keyboard backlight rgb leds of Lenovo Legion Y720 notebook.",
-	"main": "./dist/js/main.js",
-	"author": "Izurii Hootoh <izuriihootoh@gmail.com> (https://github.com/Izurii)",
-	"scripts": {
-		"prebuild": "./scripts/prebuild_start.sh",
-		"build": "electron-builder",
-		"prerelease": "./scripts/prebuild_start.sh",
-		"release": "electron-builder",
-		"prestart": "./scripts/prebuild_start.sh",
-		"start": "electron .",
-		"build-libs": "yarn --cwd ./libs && yarn --cwd ./libs build",
-		"build-modules": "./scripts/modules/build.sh",
-		"install-modules": "./scripts/modules/install.sh",
-		"uninstall-modules": "./scripts/modules/uninstall.sh"
-	},
-	"build": {
-		"appId": "y720-kb-led-controller",
-		"icon": "src/resources/icon.png",
-		"linux": {
-			"target": [
-				"deb",
-				"AppImage"
-			],
-			"category": "Utility",
-			"icon": "./src/resources/icons",
-			"desktop": {
-				"Categories": "Utility"
-			},
-			"publish": [
-				{
-					"provider": "github",
-					"releaseType": "draft"
-				}
-			]
-		},
-		"files": [
-			"./dist/js/**/*"
-		]
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Izurii/Lenovo-Y720-KB-Led-Controller.git"
-	},
-	"keywords": [],
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Izurii/Lenovo-Y720-KB-Led-Controller/issues"
-	},
-	"homepage": "https://github.com/Izurii/Lenovo-Y720-KB-Led-Controller#readme",
-	"devDependencies": {
-		"@types/angular": "^1.8.4",
-		"@types/angular-animate": "^1.5.11",
-		"@types/angular-aria": "^1.7.1",
-		"@types/angular-material": "^1.1.73",
-		"@types/angular-route": "^1.7.2",
-		"@types/electron": "^1.6.10",
-		"electron": "^16.0.5",
-		"electron-builder": "^22.14.5",
-		"electron-reloader": "^1.2.1",
-		"standard-version": "^9.3.2",
-		"tsc": "^2.0.3",
-		"typescript": "^4.5.4"
-	},
-	"dependencies": {
-		"angular": "^1.8.2",
-		"angular-animate": "^1.8.2",
-		"angular-aria": "^1.8.2",
-		"angular-material": "^1.2.4",
-		"angular-messages": "^1.8.2",
-		"angular-route": "^1.8.2",
-		"easy-auto-launch": "^6.0.2",
-		"electron-first-run": "^3.0.0",
-		"electron-store": "^8.0.1",
-		"sudo-prompt": "^9.2.1"
-	}
+  "productName": "Lenovo Y720 Keyboard LED Controller",
+  "name": "y720-kb-led-controller",
+  "engines": {
+    "node": "=16.9.1"
+  },
+  "engineStrict": true,
+  "version": "2.0.2",
+  "description": "Software to control the keyboard backlight rgb leds of Lenovo Legion Y720 notebook.",
+  "main": "./dist/js/main.js",
+  "author": "Izurii Hootoh <izuriihootoh@gmail.com> (https://github.com/Izurii)",
+  "scripts": {
+    "prebuild": "./scripts/prebuild_start.sh",
+    "build": "node api.js && electron-builder",
+    "prerelease": "./scripts/prebuild_start.sh",
+    "release": "electron-builder",
+    "prestart": "./scripts/prebuild_start.sh",
+    "start": "node api.js && electron .",
+    "build-libs": "yarn --cwd ./libs && yarn --cwd ./libs build",
+    "build-modules": "./scripts/modules/build.sh",
+    "install-modules": "./scripts/modules/install.sh",
+    "uninstall-modules": "./scripts/modules/uninstall.sh"
+  },
+  "build": {
+    "appId": "y720-kb-led-controller",
+    "icon": "src/resources/icon.png",
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Utility",
+      "icon": "./src/resources/icons",
+      "desktop": {
+        "Categories": "Utility"
+      },
+      "publish": [
+        {
+          "provider": "github",
+          "releaseType": "draft"
+        }
+      ]
+    },
+    "files": [
+      "./dist/js/**/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Izurii/Lenovo-Y720-KB-Led-Controller.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Izurii/Lenovo-Y720-KB-Led-Controller/issues"
+  },
+  "homepage": "https://github.com/Izurii/Lenovo-Y720-KB-Led-Controller#readme",
+  "devDependencies": {
+    "@types/angular": "^1.8.4",
+    "@types/angular-animate": "^1.5.11",
+    "@types/angular-aria": "^1.7.1",
+    "@types/angular-material": "^1.1.73",
+    "@types/angular-route": "^1.7.2",
+    "@types/electron": "^1.6.10",
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5",
+    "electron-reloader": "^1.2.1",
+    "standard-version": "^9.3.2",
+    "tsc": "^2.0.3",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-animate": "^1.8.2",
+    "angular-aria": "^1.8.2",
+    "angular-material": "^1.2.4",
+    "angular-messages": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "easy-auto-launch": "^6.0.2",
+    "electron-first-run": "^3.0.0",
+    "electron-store": "^8.0.1",
+    "sudo-prompt": "^9.2.1"
+  }
 }
